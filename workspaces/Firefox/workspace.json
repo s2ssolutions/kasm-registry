@@ -29,7 +29,7 @@
   ],
   "compatibility": [
     {
-      "version": "1.17.0",
+      "version": "1.17.x",
       "image": "s2ssolutions/firefox:test",
       "uncompressed_size_mb": 2967,
       "available_tags": [

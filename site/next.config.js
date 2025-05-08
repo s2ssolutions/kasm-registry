@@ -7,7 +7,7 @@ const nextConfig = {
     name: 'S2S Solutions',
     description: 'The official registry for S2S Solutions workspaces.',
     icon: '/img/logo.svg',
-    listUrl: 'https:/s2ssolutions.github.io/',
+    listUrl: 'https:/s2ssolutions.github.io/kasm-registry/',
     contactUrl: 'support@s2susa.com',
   },
   reactStrictMode: true,

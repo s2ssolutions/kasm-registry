@@ -33,7 +33,7 @@
       "image": "s2ssolutions/firefox:test",
       "uncompressed_size_mb": 2967,
       "available_tags": [
-        "test"
+        "develop"
       ]
     }
   ]

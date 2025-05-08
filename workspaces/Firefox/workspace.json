@@ -13,28 +13,8 @@
   "require_gpu": false,
   "enabled": true,
   "image_type": "Container",
-  "run_config": {
-    "hostname": "kasm"
-  },
-  "exec_config": {
-    "go": {
-      "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
-    },
-    "assign": {
-      "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
-    }
-  },
+  "name": "s2ssolutions/firefox:test",
   "architecture": [
     "amd64"
-  ],
-  "compatibility": [
-    {
-      "version": "1.17.x",
-      "image": "s2ssolutions/firefox:test",
-      "uncompressed_size_mb": 2967,
-      "available_tags": [
-        "test"
-      ]
-    }
   ]
 }

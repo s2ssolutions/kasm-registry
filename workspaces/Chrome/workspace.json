@@ -1,0 +1,45 @@
+{
+    "friendly_name": "Chrome",
+    "image_src": "chrome.png",
+    "description": "Google Chrome is a cross-platform web browser developed by Google.",
+    "cores": 1,
+    "memory": 1792,
+    "gpu_count": 0,
+    "cpu_allocation_method": "Inherit",
+    "docker_registry": "https://index.docker.io/v1/",
+    "categories": [
+      "Browser"
+    ],
+    "require_gpu": false,
+    "enabled": true,
+    "image_type": "Container",
+    "run_config": {
+      "hostname": "kasm",
+      "environment": {
+        "SHOW_VPN_STATUS": 0,
+        "SHOW_IP_STATUS": 0
+      }
+    },
+    "exec_config": {
+      "go": {
+        "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
+      },
+      "assign": {
+        "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
+      }
+    },
+    "architecture": [
+      "amd64"
+    ],
+    "compatibility": [
+      {
+        "version": "1.17.x",
+        "image": "s2ssolutions/chrome:test",
+        "uncompressed_size_mb": 2934,
+        "available_tags": [
+          "develop",
+          "test"
+        ]
+      }
+    ]
+  }

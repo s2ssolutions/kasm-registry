@@ -1,0 +1,46 @@
+{
+    "friendly_name": "Edge",
+    "image_src": "edge.png",
+    "description": "Microsoft Edge is a cross-platform web browser developed by Microsoft.",
+    "cores": 1,
+    "memory": 1792,
+    "gpu_count": 0,
+    "cpu_allocation_method": "Inherit",
+    "docker_registry": "https://index.docker.io/v1/",
+    "categories": [
+      "Browser"
+    ],
+    "require_gpu": false,
+    "enabled": true,
+    "image_type": "Container",
+    "run_config": {
+      "hostname": "kasm",
+      "environment": {
+        "SHOW_VPN_STATUS": 0,
+        "SHOW_IP_STATUS": 0
+      }
+    },
+    "exec_config": {
+      "go": {
+        "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
+      },
+      "assign": {
+        "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
+      }
+    },
+    "notes": "The Kasm Edge Workspace requires \"seccomp=unconfined\" to function properly.\n\nThis can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n",
+    "architecture": [
+      "amd64"
+    ],
+    "compatibility": [
+      {
+        "version": "1.17.x",
+        "image": "s2ssolutions/edge:test",
+        "uncompressed_size_mb": 3165,
+        "available_tags": [
+          "develop",
+          "test"
+        ]
+      }
+    ]
+  }

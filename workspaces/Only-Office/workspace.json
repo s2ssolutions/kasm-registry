@@ -1,0 +1,38 @@
+{
+    "friendly_name": "Only Office",
+    "image_src": "only-office.png",
+    "description": "ONLYOFFICE offers a secure online office suite highly compatible with MS Office formats.",
+    "cores": 1,
+    "memory": 1792,
+    "gpu_count": 0,
+    "cpu_allocation_method": "Inherit",
+    "docker_registry": "https://index.docker.io/v1/",
+    "categories": [
+      "Productivity",
+      "Office"
+    ],
+    "require_gpu": false,
+    "enabled": true,
+    "image_type": "Container",
+    "run_config": {
+        "hostname": "kasm",
+        "environment": {
+            "SHOW_VPN_STATUS": 0,
+            "SHOW_IP_STATUS": 0
+        }
+    },
+    "architecture": [
+      "amd64"
+    ],
+    "compatibility": [
+      {
+        "version": "1.17.x",
+        "image": "s2ssolutions/only-office:test",
+        "uncompressed_size_mb": 3633,
+        "available_tags": [
+          "develop",
+          "test"
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,37 @@
+{
+    "friendly_name": "Visual Studio Code",
+    "image_src": "vs-code.png",
+    "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.",
+    "cores": 1,
+    "memory": 1792,
+    "gpu_count": 0,
+    "cpu_allocation_method": "Inherit",
+    "docker_registry": "https://index.docker.io/v1/",
+    "categories": [
+      "Development"
+    ],
+    "require_gpu": false,
+    "enabled": true,
+    "image_type": "Container",
+    "run_config": {
+        "hostname": "kasm",
+        "environment": {
+            "SHOW_VPN_STATUS": 0,
+            "SHOW_IP_STATUS": 0
+        }
+    },
+    "architecture": [
+      "amd64"
+    ],
+    "compatibility": [
+      {
+        "version": "1.17.x",
+        "image": "s2ssolutions/vs-code:test",
+        "uncompressed_size_mb": 3593,
+        "available_tags": [
+          "develop",
+          "test"
+        ]
+      }
+    ]
+  }

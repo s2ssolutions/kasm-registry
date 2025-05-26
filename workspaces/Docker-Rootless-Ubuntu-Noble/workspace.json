@@ -1,0 +1,41 @@
+{
+  "friendly_name": "Docker Rootless Ubuntu Noble",
+  "image_src": "docker-ubuntu.png",
+  "description": "Rootless Docker in Docker Desktop image Ubuntu Noble based.",
+  "cores": 2,
+  "memory": 2768,
+  "gpu_count": 0,
+  "cpu_allocation_method": "Inherit",
+  "docker_registry": "https://index.docker.io/v1/",
+  "categories": [
+    "Desktop",
+    "Productivity",
+    "Development"
+  ],
+  "require_gpu": false,
+  "enabled": true,
+  "image_type": "Container",
+  "run_config": {
+    "hostname": "kasm",
+    "privileged": true,
+    "environment": {
+            "SHOW_VPN_STATUS": 0,
+            "SHOW_IP_STATUS": 0
+        }
+  },
+  "notes": "The Kasm Docker Rootless Ubuntu Noble Workspace requires libseccomp => 2.5.3 and Linux Kernel 6.3+ to run.\n\nThis can be checked by running runc --version\n\nIf you still want to run Docker Rootless Ubuntu Noble but do not have the minimum required libseccomp version, it can be run in an unsecure manner by adding: {\"security_opt\":[\"seccomp=unconfined\"]} to the Docker Run Config Override (JSON) setting above.\n\nNOTE: This will run the Workspace without the docker seccomp sandbox and will significantly reduce the amount of protection that Kasm Workspaces can provide.\n\nFor Ubuntu Noble hosts, Docker-in-Docker rootless images require the rootlesskit AppArmor profile. Include the following in your Docker Run Config Override (JSON) for your workspace to function properly: {\"security_opt\":[\"apparmor=rootlesskit\"]}\n",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.17.x",
+      "image": "s2ssolutions/ubuntu-noble-dind-rootless:test",
+      "uncompressed_size_mb": 5001,
+      "available_tags": [
+        "develop",
+        "test"
+      ]
+    }
+  ]
+}
